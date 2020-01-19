@@ -1,0 +1,24 @@
+{
+  "name": "react_post",
+  "version": "1.0.0",
+  "description": "post text to selected social media",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtofoli1/react_post.git"
+  },
+  "keywords": [
+    "facebook",
+    "twitter",
+    "whatsapp"
+  ],
+  "author": "dalton tofoli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtofoli1/react_post/issues"
+  },
+  "homepage": "https://github.com/dtofoli1/react_post#readme"
+}
