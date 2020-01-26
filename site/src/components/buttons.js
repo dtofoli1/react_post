@@ -8,9 +8,9 @@ export class Buttons extends React.Component{
                 <label htmlFor="msg">
                     Insira seu texto aqui
                 </label>
-                <div>
-                <input type="text"
-                    className="form-control" id="msg"
+                <div>  
+                <input classname="mb-3" type="text"
+                    id="msg"
                     value={this.props.msg}
                     onChange={this.props.msgChange} />
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from './components/header.js'
 import { Share } from './components/share.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {

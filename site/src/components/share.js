@@ -1,9 +1,15 @@
 import React from 'react'
-import { Buttons } from './buttons.js'
 import { 
     FacebookShareButton,
-    FacebookIcon
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    LinkedinShareButton,
+    LinkedinIcon,
+    WhatsappShareButton,
+    WhatsappIcon
 } from 'react-share'
+import { Buttons } from './buttons.js'
 
 export class Share extends React.Component{
     constructor(props) {
@@ -28,8 +34,8 @@ export class Share extends React.Component{
         console.log('teste')
     }
 
-    componentDidMount() {
-        this.intervalId = setInterval(this.getTime, 1000);
+    componentWillMount() {
+        this.intervalId = setInterval(this.getTime, 1);
     }
 
     componentWillUnmount(){
@@ -39,13 +45,22 @@ export class Share extends React.Component{
     render(){
         return(
             <div>
-                <Buttons 
+                <Buttons classname="buttonsComponent"
                 msg={this.state.codigo}
                 msgChange={this.msgChange.bind(this)}/>
                 <div align="center">
-                    <FacebookShareButton url={"github.com/dtofoli1"} quote={this.state.msg} hidden={this.state.odd}>
-                        <FacebookIcon size={28} round />
-                     </FacebookShareButton>
+                        <FacebookShareButton url={"github.com/dtofoli1"} quote={this.state.msg} hidden={this.state.odd}>
+                            <FacebookIcon size={28} round />
+                        </FacebookShareButton>
+                     <TwitterShareButton url={"github.com/dtofoli1"} quote={this.state.msg} hidden={this.state.odd}>
+                        <TwitterIcon size={28} round />
+                     </TwitterShareButton>
+                     <LinkedinShareButton url={"github.com/dtofoli1"} quote={this.state.msg} hidden={this.state.odd}>
+                        <LinkedinIcon size={28} round />
+                     </LinkedinShareButton>
+                     <WhatsappShareButton url={"github.com/dtofoli1"} quote={this.state.msg} hidden={this.state.odd}>
+                        <WhatsappIcon size={28} round />
+                     </WhatsappShareButton>
                 </div>
             </div>
         )
